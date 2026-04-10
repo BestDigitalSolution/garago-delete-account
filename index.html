@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garago — Delete Account & Data</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #0A0C12;
+            color: #E4E8F5;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 40px 24px 60px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 600;
+            color: #3B82F6;
+            margin-bottom: 32px;
+            letter-spacing: -0.02em;
+        }
+
+        .lang-tabs {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 32px;
+            background: #12141C;
+            border-radius: 10px;
+            padding: 4px;
+            width: fit-content;
+        }
+
+        .lang-tab {
+            padding: 6px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #8891A8;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            background: transparent;
+        }
+
+        .lang-tab:hover {
+            color: #E4E8F5;
+        }
+
+        .lang-tab.active {
+            background: #1E2130;
+            color: #E4E8F5;
+        }
+
+        .content-block {
+            display: none;
+        }
+
+        .content-block.active {
+            display: block;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #E4E8F5;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #8891A8;
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 17px;
+            font-weight: 600;
+            color: #E4E8F5;
+            margin-top: 28px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 15px;
+            color: #B0B8CC;
+            margin-bottom: 16px;
+        }
+
+        .steps {
+            margin: 16px 0 24px;
+            padding: 20px 24px;
+            background: #12141C;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .step {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 10px 0;
+        }
+
+        .step:not(:last-child) {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .step-num {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.12);
+            color: #60A5FA;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1px;
+        }
+
+        .step-text {
+            font-size: 14px;
+            color: #B0B8CC;
+            line-height: 1.5;
+        }
+
+        .step-text strong {
+            color: #E4E8F5;
+            font-weight: 500;
+        }
+
+        .warning {
+            margin: 24px 0;
+            padding: 16px 20px;
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.15);
+            border-radius: 10px;
+            font-size: 14px;
+            color: #FCA5A5;
+            line-height: 1.5;
+        }
+
+        .contact {
+            margin-top: 32px;
+            padding: 20px 24px;
+            background: #12141C;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .contact p {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .contact a {
+            color: #60A5FA;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            font-size: 12px;
+            color: #4A5168;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Garago</div>
+
+        <div class="lang-tabs">
+            <button class="lang-tab active" onclick="switchLang('en')">English</button>
+            <button class="lang-tab" onclick="switchLang('uk')">Українська</button>
+            <button class="lang-tab" onclick="switchLang('ru')">Русский</button>
+        </div>
+
+        <!-- English -->
+        <div id="lang-en" class="content-block active">
+            <h1>Delete account & data</h1>
+            <p class="subtitle">Garago app by Best Digital Solution</p>
+
+            <h2>How to delete your account</h2>
+            <p>You can delete your account and all associated data directly in the app:</p>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-text">Open <strong>Garago</strong> and go to the <strong>Settings</strong> tab</div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-text">Tap on your <strong>profile card</strong> at the top</div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-text">Select <strong>Manage account</strong></div>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-text">Tap <strong>Delete account</strong> and confirm</div>
+                </div>
+            </div>
+
+            <div class="warning">
+                ⚠ This action is irreversible. All your data — vehicles, expenses, reminders, and settings — will be permanently deleted.
+            </div>
+
+            <h2>What data is deleted</h2>
+            <p>When you delete your account, the following data is permanently removed from our servers:</p>
+            <p>• Your profile information (email, name, photo)<br>
+               • All vehicles and their photos<br>
+               • All expense and maintenance records<br>
+               • All reminders<br>
+               • App settings and preferences<br>
+               • Subscription status</p>
+
+            <h2>Can't access the app?</h2>
+            <p>If you are unable to log in or access the app, you can request account deletion by email. Please include the email address associated with your Garago account.</p>
+
+            <div class="contact">
+                <p>Contact us:</p>
+                <p><a href="mailto:best.digital.solution.ua@gmail.com?subject=Delete%20my%20Garago%20account">best.digital.solution.ua@gmail.com</a></p>
+                <p>Subject: "Delete my Garago account"</p>
+            </div>
+
+            <p style="margin-top: 20px; font-size: 14px; color: #8891A8;">Data deletion requests via email are processed within 7 business days.</p>
+
+            <div class="footer">© 2026 Best Digital Solution. All rights reserved.</div>
+        </div>
+
+        <!-- Ukrainian -->
+        <div id="lang-uk" class="content-block">
+            <h1>Видалення акаунту та даних</h1>
+            <p class="subtitle">Додаток Garago від Best Digital Solution</p>
+
+            <h2>Як видалити акаунт</h2>
+            <p>Ви можете видалити свій акаунт та всі пов'язані дані безпосередньо в додатку:</p>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-text">Відкрийте <strong>Garago</strong> та перейдіть на вкладку <strong>Налаштування</strong></div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-text">Натисніть на <strong>картку профілю</strong> зверху</div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-text">Оберіть <strong>Керування акаунтом</strong></div>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-text">Натисніть <strong>Видалити акаунт</strong> та підтвердіть</div>
+                </div>
+            </div>
+
+            <div class="warning">
+                ⚠ Ця дія незворотна. Усі ваші дані — автомобілі, витрати, нагадування та налаштування — будуть видалені назавжди.
+            </div>
+
+            <h2>Які дані видаляються</h2>
+            <p>При видаленні акаунту з наших серверів назавжди видаляються:</p>
+            <p>• Інформація профілю (email, ім'я, фото)<br>
+               • Усі автомобілі та їхні фото<br>
+               • Усі записи витрат та обслуговування<br>
+               • Усі нагадування<br>
+               • Налаштування додатку<br>
+               • Статус підписки</p>
+
+            <h2>Не можете зайти в додаток?</h2>
+            <p>Якщо ви не можете увійти або відкрити додаток, ви можете надіслати запит на видалення акаунту електронною поштою. Вкажіть email, пов'язаний з вашим акаунтом Garago.</p>
+
+            <div class="contact">
+                <p>Зв'яжіться з нами:</p>
+                <p><a href="mailto:best.digital.solution.ua@gmail.com?subject=Видаліть%20мій%20акаунт%20Garago">best.digital.solution.ua@gmail.com</a></p>
+                <p>Тема: "Видаліть мій акаунт Garago"</p>
+            </div>
+
+            <p style="margin-top: 20px; font-size: 14px; color: #8891A8;">Запити на видалення через email обробляються протягом 7 робочих днів.</p>
+
+            <div class="footer">© 2026 Best Digital Solution. Усі права захищені.</div>
+        </div>
+
+        <!-- Russian -->
+        <div id="lang-ru" class="content-block">
+            <h1>Удаление аккаунта и данных</h1>
+            <p class="subtitle">Приложение Garago от Best Digital Solution</p>
+
+            <h2>Как удалить аккаунт</h2>
+            <p>Вы можете удалить свой аккаунт и все связанные данные прямо в приложении:</p>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-text">Откройте <strong>Garago</strong> и перейдите на вкладку <strong>Настройки</strong></div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-text">Нажмите на <strong>карточку профиля</strong> вверху</div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-text">Выберите <strong>Управление аккаунтом</strong></div>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-text">Нажмите <strong>Удалить аккаунт</strong> и подтвердите</div>
+                </div>
+            </div>
+
+            <div class="warning">
+                ⚠ Это действие необратимо. Все ваши данные — автомобили, расходы, напоминания и настройки — будут удалены навсегда.
+            </div>
+
+            <h2>Какие данные удаляются</h2>
+            <p>При удалении аккаунта с наших серверов навсегда удаляются:</p>
+            <p>• Информация профиля (email, имя, фото)<br>
+               • Все автомобили и их фото<br>
+               • Все записи расходов и обслуживания<br>
+               • Все напоминания<br>
+               • Настройки приложения<br>
+               • Статус подписки</p>
+
+            <h2>Не можете зайти в приложение?</h2>
+            <p>Если вы не можете войти или открыть приложение, вы можете отправить запрос на удаление аккаунта по электронной почте. Укажите email, связанный с вашим аккаунтом Garago.</p>
+
+            <div class="contact">
+                <p>Свяжитесь с нами:</p>
+                <p><a href="mailto:best.digital.solution.ua@gmail.com?subject=Удалите%20мой%20аккаунт%20Garago">best.digital.solution.ua@gmail.com</a></p>
+                <p>Тема: "Удалите мой аккаунт Garago"</p>
+            </div>
+
+            <p style="margin-top: 20px; font-size: 14px; color: #8891A8;">Запросы на удаление через email обрабатываются в течение 7 рабочих дней.</p>
+
+            <div class="footer">© 2026 Best Digital Solution. Все права защищены.</div>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.content-block').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
+            document.getElementById('lang-' + lang).classList.add('active');
+            document.querySelector('[onclick="switchLang(\'' + lang + '\')"]').classList.add('active');
+        }
+
+        (function() {
+            var userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            if (userLang.startsWith('uk')) switchLang('uk');
+            else if (userLang.startsWith('ru')) switchLang('ru');
+        })();
+    </script>
+</body>
+</html>
