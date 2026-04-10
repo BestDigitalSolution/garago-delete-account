@@ -1,0 +1,1 @@
+# garago-delete-account
